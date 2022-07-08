@@ -17,6 +17,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Menu2Component } from './components/shared/menu2/menu2.component';
 import { MenuuserComponent } from './components/shared/menuuser/menuuser.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { MenuuserComponent } from './components/shared/menuuser/menuuser.compone
     HttpClientModule,
     BookMaterialModule,
     Ng2SearchPipeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

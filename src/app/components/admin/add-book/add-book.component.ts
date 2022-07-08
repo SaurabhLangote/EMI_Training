@@ -2,7 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { BookServiceService } from '../../sharedmodule/service/book-service.service';
-
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-add-book',
   templateUrl: './add-book.component.html',
@@ -13,7 +13,8 @@ export class AddBookComponent implements OnInit {
   constructor (private formbuilder: FormBuilder,
     private api: BookServiceService,
     @Inject(MAT_DIALOG_DATA) public editBook: any,
-    private dialogref: MatDialogRef<AddBookComponent>
+    private dialogref: MatDialogRef<AddBookComponent>,
+    private toastr: ToastrService
   ) { }
 
   bookForm : FormGroup;
@@ -47,7 +48,10 @@ export class AddBookComponent implements OnInit {
         this.api.postBook(this.bookForm.value)
           .subscribe({
             next: (Response) => {
-              alert("Book Added Successfully !!")
+              // alert("Book Added Successfully !!")
+              this.toastr.success('Book Added Successfully','Toastr fun!',{
+                timeOut: 5000,
+              })
               this.bookForm.reset();
               this.dialogref.close('save');
               window.location.reload(); 

@@ -27,6 +27,27 @@
       "Quantity": 3,
       "Category": "Novels",
       "id": 5
+    },
+    {
+      "BookName": "Habibi",
+      "Author": "Badshah",
+      "Quantity": 10,
+      "Category": "Novels",
+      "id": 6
+    },
+    {
+      "BookName": "abac ",
+      "Author": "abasbsb",
+      "Quantity": 45,
+      "Category": "Novels",
+      "id": 7
+    },
+    {
+      "BookName": "dsdhjaskdj",
+      "Author": "kdjsakjhdkj",
+      "Quantity": 56,
+      "Category": "Kids",
+      "id": 8
     }
   ]
 }
