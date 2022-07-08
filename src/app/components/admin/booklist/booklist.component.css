@@ -1,0 +1,26 @@
+.main
+{
+    margin-left: 37%; 
+    margin-top: 10px;
+    width: 400px; 
+}
+
+.container
+{
+    max-width: 1000px;
+    margin: 0 auto;      /*-To Make table at center-*/
+}
+
+
+table {
+    width: 100%;
+ }
+  
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+ 
+
+ 

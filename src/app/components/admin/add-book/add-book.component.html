@@ -1,0 +1,39 @@
+
+<h1 mat-dialog-title>Add Book...</h1>
+<mat-dialog-content>
+    <form class="form" [formGroup]="bookForm">
+
+        <mat-form-field appreance="fill" class="field">
+            <mat-label>BookName</mat-label>
+            <input type="text" formControlName="BookName" matInput>
+        </mat-form-field>
+
+
+        <mat-form-field appreance="fill" class="field">
+            <mat-label>Author</mat-label>
+            <input type="text" formControlName="Author" matInput>
+        </mat-form-field>
+
+
+        <mat-form-field appreance="fill" class="field">
+            <mat-label>Quantity</mat-label>
+            <input type="number" formControlName="Quantity" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Category</mat-label>
+            <mat-select formControlName="Category">
+                <mat-option value="Story">Story</mat-option>
+                <mat-option value="Novels">Novels</mat-option>
+                <mat-option value="Kids">Kids</mat-option>
+                <mat-option value="Political">Political</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <div mat-dialog-actions class="field" [align]="'end'">
+            <button mat-raised-button color="primary" (click)="addBook()" mat-dialog-close>{{actionBtn}}</button>
+            <button mat-raised-button color="primary" mat-dialog-close>Close</button>
+        </div>
+    </form>
+</mat-dialog-content>
+
