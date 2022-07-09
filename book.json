@@ -1,53 +1,18 @@
 {
   "books": [
     {
-      "BookName": "Mahabharat",
-      "Author": "Vyas",
-      "Quantity": 12,
-      "Category": "Story",
-      "id": 2
-    },
-    {
       "BookName": "Ramayana",
       "Author": "TulsiDas",
       "Quantity": 10,
-      "Category": "Story",
+      "Category": "Novels",
       "id": 3
     },
     {
-      "BookName": "dfgdf`hfcfd``",
-      "Author": "fcdfhdhf",
-      "Quantity": 50,
+      "BookName": "sda",
+      "Author": "sad2",
+      "Quantity": 22,
       "Category": "Story",
-      "id": 4
-    },
-    {
-      "BookName": "A",
-      "Author": "B",
-      "Quantity": 3,
-      "Category": "Novels",
-      "id": 5
-    },
-    {
-      "BookName": "Habibi",
-      "Author": "Badshah",
-      "Quantity": 10,
-      "Category": "Novels",
-      "id": 6
-    },
-    {
-      "BookName": "abac ",
-      "Author": "abasbsb",
-      "Quantity": 45,
-      "Category": "Novels",
-      "id": 7
-    },
-    {
-      "BookName": "dsdhjaskdj",
-      "Author": "kdjsakjhdkj",
-      "Quantity": 56,
-      "Category": "Kids",
-      "id": 8
+      "id": 10
     }
   ]
 }

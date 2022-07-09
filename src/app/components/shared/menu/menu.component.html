@@ -2,6 +2,10 @@
     
     <span>Welcome Admin..</span>
     <span class="example-spacer"></span>
+    <button mat-icon-button style="margin-right: 20px;" (click)="toHome()">
+        
+      <mat-icon>home</mat-icon>
+  </button>
   
    
     <button mat-icon-button style="margin-right: 20px;" (click)="BookList()">
@@ -9,11 +13,11 @@
         <mat-icon>books</mat-icon>
     </button>
 
-    <button mat-icon-button class="example-icon" style="margin-right: 20px;">
+    <button mat-icon-button class="example-icon" style="margin-right: 20px;" (click)="requestGot()">
       <mat-icon matBadge="3" matBadgeColor="warn">notifications</mat-icon>
     </button>
    
-    <button mat-icon-button  style="margin-right: 20px;" routerLink="/home">
+    <button mat-icon-button  style="margin-right: 20px;" (click)="logout()">
        <mat-icon>logout</mat-icon>
       </button>
   

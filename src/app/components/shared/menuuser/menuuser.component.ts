@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { LoginComponent } from '../login/login.component';
 
 @Component({
@@ -10,14 +11,16 @@ import { LoginComponent } from '../login/login.component';
 })
 export class MenuuserComponent implements OnInit {
 
-  constructor(public dialog: MatDialog,private router:Router) { }
+  constructor(public dialog: MatDialog,private router:Router,private toastr:ToastrService) { }
 
   ngOnInit(): void {
   }
 
 
   logout(){
-    this.router.navigateByUrl('/home')
+    this.router.navigateByUrl('/home');this.toastr.success('','You Logged Out',{
+      timeOut: 3000,positionClass: 'toast-top-center'
+    })
   }
 
 }

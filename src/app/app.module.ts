@@ -18,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { Menu2Component } from './components/shared/menu2/menu2.component';
 import { MenuuserComponent } from './components/shared/menuuser/menuuser.component';
 import { ToastrModule } from 'ngx-toastr';
+import { NotificationsComponent } from './components/admin/notifications/notifications.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ToastrModule } from 'ngx-toastr';
     UserBookListComponent,
     HomeComponent,
     Menu2Component,
-    MenuuserComponent
+    MenuuserComponent,
+    NotificationsComponent
   ],
   imports: [
     BrowserModule,

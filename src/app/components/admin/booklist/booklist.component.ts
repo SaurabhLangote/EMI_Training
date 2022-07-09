@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { ToastrService } from 'ngx-toastr';
 import { BookServiceService } from '../../sharedmodule/service/book-service.service';
 import { AddBookComponent } from '../add-book/add-book.component';
 
@@ -20,7 +21,7 @@ export class BooklistComponent implements OnInit {
   @ViewChild(MatPaginator) paginator !: MatPaginator;
   @ViewChild(MatSort) sort !: MatSort;
 
-  constructor( public dialog: MatDialog, private api: BookServiceService) { }
+  constructor( public dialog: MatDialog, private api: BookServiceService,private toastr:ToastrService ) { }
 
   ngOnInit(): void {
 
@@ -84,7 +85,10 @@ export class BooklistComponent implements OnInit {
     this.api.deleteBook(id)
     .subscribe({
       next:(res)=>{
-        alert("Product Deleted Successfully ")
+        // alert("Product Deleted Successfully ")
+        this.toastr.error(' ','Book Deleted',{
+          timeOut: 3000,positionClass: 'toast-top-center'
+        })
         this.getAllbooks();
       }
 

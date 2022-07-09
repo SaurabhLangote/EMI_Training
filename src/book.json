@@ -1,0 +1,37 @@
+{
+  "books": [
+    {
+      "BookName": "Ramayana",
+      "Author": "TulsiDas",
+      "Quantity": 10,
+      "Category": "Novels",
+      "id": 3
+    },
+    {
+      "BookName": "book2",
+      "Author": "author1",
+      "Quantity": 10,
+      "Category": "Novels",
+      "id": 11
+    }
+  ],
+  "requestlist": [
+    {
+      "BookName": "Ramayana",
+      "Author": "TulsiDas",
+      "Quantity": 10,
+      "Category": "Novels",
+      "id": 1
+    }
+  ],
+  "issuedBooks": [
+    {
+      "id": 4,
+      "bookName": "History",
+      "category": "technology",
+      "authorName": "rg",
+      "discription": "tht",
+      "quantity": 5
+    }
+  ]
+}

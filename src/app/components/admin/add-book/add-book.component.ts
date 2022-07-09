@@ -49,8 +49,8 @@ export class AddBookComponent implements OnInit {
           .subscribe({
             next: (Response) => {
               // alert("Book Added Successfully !!")
-              this.toastr.success('Book Added Successfully','Toastr fun!',{
-                timeOut: 5000,
+              this.toastr.success('','Book Added Successfully',{
+                timeOut: 3000,positionClass: 'toast-top-center'
               })
               this.bookForm.reset();
               this.dialogref.close('save');
@@ -69,7 +69,10 @@ export class AddBookComponent implements OnInit {
     this.api.putProduct(this.bookForm.value, this.editBook.id)
       .subscribe({
         next: (res) => {
-          alert("Product Updated");
+          // alert("Product Updated");
+          this.toastr.success('','Book Updated Successfully',{
+            timeOut: 3000,positionClass: 'toast-top-center'
+          })
           this.bookForm.reset();
           this.dialogref.close('update');
         },

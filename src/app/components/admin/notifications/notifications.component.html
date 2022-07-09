@@ -1,6 +1,3 @@
-<app-menuuser></app-menuuser>
-  <h1>Welcome To User Section</h1>
-  
 <div class="container">
     <div>
       <form [formGroup]= "requestForm">
@@ -38,8 +35,8 @@
 
           <ng-container matColumnDef="Cart">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Cart </th>
-            <td mat-cell *matCellDef="let row"><button mat-raised-button color="primary" (click)= " requestBook(row)" >
-              add
+            <td mat-cell *matCellDef="let row"><button mat-raised-button color="primary">
+              accept
             </button></td>
           </ng-container>
   
@@ -60,4 +57,3 @@
   </div>
 
 <router-outlet></router-outlet>
-  <router-outlet></router-outlet>
