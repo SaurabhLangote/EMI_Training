@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { ToastrService } from 'ngx-toastr';
 import { BookServiceService } from '../../sharedmodule/service/book-service.service';
 import { UserServiceService } from '../../sharedmodule/service/user-service.service';
 
@@ -22,7 +23,11 @@ export class UserhomeComponent implements OnInit {
   no:any;
   @ViewChild(MatPaginator) paginator !: MatPaginator;
   @ViewChild(MatSort) sort !: MatSort;
-  constructor(public dialog: MatDialog, private api: BookServiceService,private formbuilder:FormBuilder,private requestapi:UserServiceService) { }
+  constructor(public dialog: MatDialog,
+     private api: BookServiceService,
+     private formbuilder:FormBuilder,
+     private requestapi:UserServiceService,
+     private toastr: ToastrService) { }
 
   ngOnInit(): void {
 
@@ -71,7 +76,10 @@ export class UserhomeComponent implements OnInit {
   /*-request-*/
   sendRequest(no:any){
     if(no>2){
-     alert("You cross the limit");
+    //  alert("You cross the limit");
+     this.toastr.error('','You crossed the limit,3 Requests Only',{
+      timeOut: 3000,positionClass: 'toast-top-center'
+    })
     }
     else{
      
@@ -81,7 +89,10 @@ export class UserhomeComponent implements OnInit {
        this.requestapi.requestBook(this.requestForm.value)
        .subscribe({
          next:(res)=>{
-           alert("send request successfully")
+          //  alert("send request successfully");
+           this.toastr.success('','Send Request Successfully',{
+            timeOut: 3000,positionClass: 'toast-top-center'
+          })
            
          }
        })
