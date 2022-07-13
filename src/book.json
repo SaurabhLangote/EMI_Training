@@ -8,13 +8,6 @@
       "id": 3
     },
     {
-      "BookName": "book2",
-      "Author": "author1",
-      "Quantity": 10,
-      "Category": "Story",
-      "id": 11
-    },
-    {
       "BookName": "RichDadPoorDad",
       "Author": "RobertKiosaki",
       "Quantity": 20,
@@ -43,6 +36,34 @@
       "Quantity": 20,
       "Category": "Political",
       "id": 2
+    },
+    {
+      "BookName": "RichDadPoorDad",
+      "Author": "RobertKiosaki",
+      "Quantity": 20,
+      "Category": "Political",
+      "id": 3
+    },
+    {
+      "BookName": "Ramayana",
+      "Author": "TulsiDas",
+      "Quantity": 10,
+      "Category": "Political",
+      "id": 4
+    },
+    {
+      "BookName": "RichDadPoorDad",
+      "Author": "RobertKiosaki",
+      "Quantity": 20,
+      "Category": "Political",
+      "id": 5
+    },
+    {
+      "BookName": "FearNot-BeStrong",
+      "Author": "VivekNanda",
+      "Quantity": 20,
+      "Category": "Informative",
+      "id": 6
     }
   ],
   "issuedBooks": [

@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
     
-    <span>Welcome Admin..</span>
+    <span>BookZone.com</span>
     <span class="example-spacer"></span>
     <button mat-icon-button style="margin-right: 20px;" (click)="toHome()">
         
@@ -14,7 +14,7 @@
     </button>
 
     <button mat-icon-button class="example-icon" style="margin-right: 20px;" (click)="requestGot()">
-      <mat-icon matBadge="3" matBadgeColor="warn">notifications</mat-icon>
+      <mat-icon matBadge={{requestDatalength}} matBadgeColor="warn">notifications</mat-icon>
     </button>
    
     <button mat-icon-button  style="margin-right: 20px;" (click)="logout()">

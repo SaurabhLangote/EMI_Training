@@ -7,6 +7,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { NotificationsComponent } from '../../admin/notifications/notifications.component';
 import { BookServiceService } from '../../sharedmodule/service/book-service.service';
 import { LoginComponent } from '../login/login.component';
 
@@ -17,12 +18,14 @@ import { LoginComponent } from '../login/login.component';
 })
 export class MenuComponent implements OnInit {
   dataSource!: MatTableDataSource<any>;
+  requestDatalength:string
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 constructor(public dialog: MatDialog,private router:Router,private toastr:ToastrService,private api:BookServiceService, private http:HttpClientModule ) { }
 
   ngOnInit(): void {
+    this.getRequest()
   }
 openDialog(){
     this.dialog.open(LoginComponent);
@@ -40,8 +43,8 @@ openDialog(){
 
   requestGot()
   {
-
-    this.router.navigateByUrl('dashboard/notifications');
+    this.dialog.open(NotificationsComponent)
+    // this.router.navigateByUrl('dashboard/notifications');
     // return this.api.getRequest()
     // .subscribe({
     //   next:(res:any)=>{
@@ -59,5 +62,19 @@ openDialog(){
   toHome()
   {
     this.router.navigateByUrl('dashboard');
+  }
+  getRequest() {
+
+    this.api.getRequest().subscribe({
+      next: (res) => {
+        this.requestDatalength=res.length
+        // console.log(this.requestDatalength.length)
+        this.dataSource = new MatTableDataSource(res);
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
+      }
+    })
+    console.log(this.api.getRequest());
+
   }
 }

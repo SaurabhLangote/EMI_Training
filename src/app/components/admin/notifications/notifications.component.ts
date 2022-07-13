@@ -18,6 +18,7 @@ export class NotificationsComponent implements OnInit {
   bookData: any;
   displayedColumns: string[] = ['BookName', 'Author', 'Quantity', 'Category', 'Cart'];
   dataSource !: MatTableDataSource<any>;
+  requestDatalength:[]
   // count:number=0;
   // no:any;
   @ViewChild(MatPaginator) paginator !: MatPaginator;
@@ -72,6 +73,8 @@ export class NotificationsComponent implements OnInit {
 
     this.api.getRequest().subscribe({
       next: (res) => {
+        // this.requestDatalength=res
+        // console.log(this.requestDatalength.length)
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
@@ -88,19 +91,15 @@ export class NotificationsComponent implements OnInit {
 
     
   }
+  Reject()
+  {
+    this.toastr.error('', 'Request Rejected', {
+      timeOut: 3000, positionClass: 'toast-top-center'
+    });
 
-  // deleteBook(id: number) {
-  //   this.api.deleteBook(id)
-  //     .subscribe({
-  //       next: (res) => {
-  //         // alert("Product Deleted Successfully ")
-  //         this.toastr.error(' ', 'Book Deleted', {
-  //           timeOut: 3000, positionClass: 'toast-top-center'
-  //         })
+  }
 
-  //       }
 
-  //     })
-  // }
+  
 }
 
