@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { AuthenticateService } from '../../sharedmodule/service/authenticate.service';
 import { LoginComponent } from '../login/login.component';
 
 @Component({
@@ -11,7 +12,10 @@ import { LoginComponent } from '../login/login.component';
 })
 export class MenuuserComponent implements OnInit {
 
-  constructor(public dialog: MatDialog,private router:Router,private toastr:ToastrService) { }
+  constructor(public dialog: MatDialog,
+    private router:Router,
+    private toastr:ToastrService,
+    public authService:AuthenticateService) { }
 
   ngOnInit(): void {
   }

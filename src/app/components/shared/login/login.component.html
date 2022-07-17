@@ -1,29 +1,39 @@
+
 <mat-card class="main">
+  <div class="close_btn">
+    <button mat-icon-button mat-dialog-close>
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <form class="form" #myform="ngForm" (ngSubmit)="onSubmit(myform)">
   <mat-card-header>
     <mat-card-title>Login</mat-card-title>
   </mat-card-header>
-  <mat-card-content class="field">
-    <form class="form">
-      <table class="example-full-width" cellspacing="0" class="table">
+
+    <mat-card-content class="field">
+      <table class="table" cellspacing="0" class="table">
         <tr>
           <td>
             <mat-form-field class="example-full-width">
-              <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+              <input matInput placeholder="username"  name="username" type="text"  class="form-control"  ngModel required>
             </mat-form-field>
           </td>
         </tr>
         <tr>
           <td>
             <mat-form-field class="example-full-width">
-              <input matInput placeholder="Password" [(ngModel)]="password" type="password" name="password" required>
+              <input matInput placeholder="password"  name="password" type="password" class="form-control" ngModel required>
             </mat-form-field>
           </td>
         </tr>
       </table>
-    </form>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-raised-button color="success" style="text-align: center;" (click)="login()">Login</button>
-    <button mat-raised-button color="primary" mat-dialog-close>Close</button>
-  </mat-card-actions>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-raised-button color="success" style="text-align: center;" type="submit">Login</button>
+      <button mat-raised-button color="primary" mat-dialog-close>Close</button>
+    </mat-card-actions>
+  </form>
+
+
 </mat-card>

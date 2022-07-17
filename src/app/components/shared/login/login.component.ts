@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { AuthenticateService } from 'src/app/components/sharedmodule/service/authenticate.service';
 
 @Component({
   selector: 'app-login',
@@ -12,43 +13,19 @@ import { ToastrService } from 'ngx-toastr';
 export class LoginComponent implements OnInit {
   username: string;
   password: string;
-  // loginForm:FormGroup;
-  constructor(private router: Router, private matdialog: MatDialog,private toastr:ToastrService) { }
-  // username: string;
-  // password: string;
-  ngOnInit() {
-    // this.loginForm = this.formBuilder.group({
-    //   name:[''],
-    //   designation:['']
-    // });
+  
+  constructor(private router: Router, private matdialog: MatDialog,private toastr:ToastrService,private service:AuthenticateService) { }
+ 
+  ngOnInit() { }
+
+  onSubmit(form:NgForm)
+  {
+    console.log(form.value);
+      this.service.authenticateEmployee(form.value)
+      this.matdialog.closeAll();
   }
 
-  login(): void {
-
-    if (this.username == 'user' && this.password == 'user123') {
-
-      this.router.navigate(["user"]);
-      this.toastr.success('','Login Successful',{
-        timeOut: 3000,positionClass: 'toast-top-center'
-      })
-
-    } else if (this.username == 'admin' && this.password == 'admin111') {
-
-      this.router.navigate(["dashboard"]);
-      this.toastr.success('','Login Successful',{
-        timeOut: 3000,positionClass: 'toast-top-center'
-      })
-
-    } else {
-
-      alert("Invalid credentials");
-
-    }
-
-
-
-    this.matdialog.closeAll();
-  }
+ 
 
 }
 

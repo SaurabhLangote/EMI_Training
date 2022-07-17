@@ -41,8 +41,7 @@ openDialog(){
     this.router.navigateByUrl('dashboard/booklist');
   }
 
-  requestGot()
-  {
+  requestGot(){
     this.dialog.open(NotificationsComponent)
     // this.router.navigateByUrl('dashboard/notifications');
     // return this.api.getRequest()

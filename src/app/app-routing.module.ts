@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthguardGuard } from './authguard.guard';
 import { AddBookComponent } from './components/admin/add-book/add-book.component';
 import { BooklistComponent } from './components/admin/booklist/booklist.component';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
@@ -16,7 +17,7 @@ const routes: Routes = [
     {path:'booklist',component:BooklistComponent},
     {path:'notifications',component:NotificationsComponent}
   ]},
-  {path:'user',component:UserhomeComponent},
+  {path:'userhome',component:UserhomeComponent,canActivate:[AuthguardGuard]},
   {path:'booklist',component:UserBookListComponent}
 ];
 

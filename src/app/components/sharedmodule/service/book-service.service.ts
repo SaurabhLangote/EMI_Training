@@ -40,7 +40,9 @@ export class BookServiceService {
 
       return this.http.get<any>("http://localhost:3000/requestlist")
      }
-
+     deleteRequest(id:any){
+      return this.http.delete<any>("http://localhost:3000/requestlist/"+id )
+     }
      issuedBook(data:any){
       return this.http.post<any>(" http://localhost:3000/issuedBooks",data)
     }

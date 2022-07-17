@@ -44,6 +44,7 @@ import { NotificationsComponent } from './components/admin/notifications/notific
     Ng2SearchPipeModule,
     ReactiveFormsModule,
     ToastrModule.forRoot()
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -91,11 +91,18 @@ export class NotificationsComponent implements OnInit {
 
     
   }
-  Reject()
-  {
-    this.toastr.error('', 'Request Rejected', {
-      timeOut: 3000, positionClass: 'toast-top-center'
-    });
+  reject(id:any){
+
+    this.api.deleteRequest(id)
+    .subscribe({
+      next:(res)=>{
+        // alert("Product Deleted Successfully ")
+        this.toastr.error(' ','Request Rejected',{
+          timeOut: 3000,positionClass: 'toast-top-center'
+        })
+        this.getRequest();
+      }
+    })
 
   }
 

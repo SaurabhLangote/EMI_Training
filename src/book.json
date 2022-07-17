@@ -1,4 +1,16 @@
 {
+  "Authenticate": [
+    {
+      "username": "user",
+      "password": "user123",
+      "role": "user"
+    },
+    {
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin"
+    }
+  ],
   "books": [
     {
       "BookName": "Ramayana",
@@ -31,9 +43,9 @@
       "id": 1
     },
     {
-      "BookName": "RichDadPoorDad",
-      "Author": "RobertKiosaki",
-      "Quantity": 20,
+      "BookName": "Ramayana",
+      "Author": "TulsiDas",
+      "Quantity": 10,
       "Category": "Political",
       "id": 2
     },
@@ -45,25 +57,11 @@
       "id": 3
     },
     {
-      "BookName": "Ramayana",
-      "Author": "TulsiDas",
-      "Quantity": 10,
-      "Category": "Political",
-      "id": 4
-    },
-    {
-      "BookName": "RichDadPoorDad",
-      "Author": "RobertKiosaki",
-      "Quantity": 20,
-      "Category": "Political",
-      "id": 5
-    },
-    {
       "BookName": "FearNot-BeStrong",
       "Author": "VivekNanda",
       "Quantity": 20,
       "Category": "Informative",
-      "id": 6
+      "id": 4
     }
   ],
   "issuedBooks": [

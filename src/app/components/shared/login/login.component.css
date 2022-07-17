@@ -1,2 +1,27 @@
+.table
+{
+    width: 100%;
+}
+.loginForm
+{    min-width: 150px;
+     max-width: 500px;
+     width: 100%;
 
-
+}
+.close_btn{
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    text-align: right;
+  }
+  .a
+  {
+    /* text-decoration: none; */
+    text-align: center;
+  }
+  .toast-container{
+    
+    position: absolute;
+    top: 0px ;
+    left: 90%;
+  }
